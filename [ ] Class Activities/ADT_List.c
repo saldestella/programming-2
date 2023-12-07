@@ -30,24 +30,32 @@ void initialize (ArrayList *L);
 
 /*  MENU DISPLAY */
 void menu() {
-//    system(cls);
-    
+//    system("cls");
+    int i;
     printf("\n\t=================== MENU ===================\n");
 	printf("\t\tSelect an option from 0 to 8: \n");
 	printf("\t============================================\n");
-	printf("\t [1] Display Scores\t[6] Retrieve First\n");
-	printf("\t [2] Input Scores\t[7] Search\n");
-	printf("\t [3] Average\t\t[8] Retrieve Last\n");
-	printf("\t [4] Minimum\t\t[0]Exit Program\n");
-	printf("\t [5] Retrieve\n");
-    
-	printf("\t============================================\n\n");
+    char options[9][20] = {
+        "Exit Program", "Insert", "Insert Last", "Delete At", "Search At", 
+        "Search For", "Display List", "Display First", "Display Last"};
+    for(i = 0; i < 9; ++i) {
+        printf("\n\t[%d] %20s", i, options[i]);
+    }
+    printf("\t============================================\n\n");
+        
 }
 
 int main() {
     ArrayList list;
     int idx = 0, position, element;
-    menu();
+    int choice = 1;
+    initialize(&list);
+
+    do{
+       menu(); 
+    } while (choice != 0);
+    
+    
 }
 
 /*  Function Definitions   */
