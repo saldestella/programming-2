@@ -5,8 +5,8 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	
-	printf("[1.0 ] Empoyee List (ID & Name): \n\n");
+	// Changed printf("[1.0 ] Employee List (ID & Name): \n\n"); to printf("[1.0 ] Employee List (ID & Name): \n\n");
+	printf("[1.0 ] Employee List (ID & Name): \n\n");
 	// start of no.1
 	// make the code below work by updating the populateEmployeeList() in cis1201.c
 	EmployeePtr employees = populateEmployeeList();
